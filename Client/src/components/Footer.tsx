@@ -17,7 +17,28 @@ export default function Footer() {
 
 
                 <Link to='/'>
-                    <img className="size-8 aspect-square" src="src/assets/favicon.svg" alt="footer logo" width={32} height={32} />
+                    {/* <img className="size-8 aspect-square" src="src/assets/favicon.svg" alt="footer logo" width={32} height={32} /> */}
+                    <svg
+                        width="36"
+                        height="36"
+                        viewBox="0 0 36 36"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+
+                        <path
+                            d="M18 6L30 26H6L18 6Z"
+                            fill="white"
+                        />
+
+
+                        <circle
+                            cx="18"
+                            cy="29"
+                            r="2.5"
+                            fill="#EC4899"
+                        />
+                    </svg>
 
                 </Link>
                 {footerData.map((section, index) => (
@@ -46,10 +67,10 @@ export default function Footer() {
                     <a rel="noreferrer">
                         <DribbbleIcon className="size-5 hover:text-pink-500" />
                     </a>
-                    <a  rel="noreferrer">
+                    <a rel="noreferrer">
                         <LinkedinIcon className="size-5 hover:text-pink-500" />
                     </a>
-                    <a  rel="noreferrer">
+                    <a rel="noreferrer">
                         <TwitterIcon className="size-5 hover:text-pink-500" />
                     </a>
                     <a rel="noreferrer">

@@ -24,7 +24,39 @@ export default function Navbar() {
                 transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1 }}
             >
                 <Link to='/'>
-                    <img className="h-8.5 w-auto" src="src/assets/logo.svg" alt="logo" width={130} height={34} />
+                    {/* <img className="h-8.5 w-auto" src="src/assets/logo.svg" alt="logo" width={130} height={34} /> */}
+                    <svg
+                        width="180"
+                        height="36"
+                        viewBox="0 0 180 36"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+
+                        <g transform="translate(0,4)">
+
+                            <path
+                                d="M14 2L26 22H2L14 2Z"
+                                fill="white"
+                            />
+
+                            <circle cx="14" cy="26" r="2" fill="#EC4899" />
+                        </g>
+
+
+                        <text
+                            x="38"
+                            y="25"
+                            fill="white"
+                            font-size="20"
+                            font-weight="600"
+                            font-family="Inter, system-ui, -apple-system, sans-serif"
+                            letter-spacing="0.3"
+                        >
+                            Thum<tspan fill="#EC4899">Genie</tspan>
+                        </text>
+                    </svg>
+
                 </Link>
 
                 <div className="hidden md:flex items-center gap-8 transition duration-500">
@@ -55,7 +87,7 @@ export default function Navbar() {
                                             navigate('/');
                                             logout();
                                         }}
-                                     
+
                                         className="bg-white/20 border-2 border-white/20 px-5 py-1.5 rounded"
                                     >
                                         Logout
