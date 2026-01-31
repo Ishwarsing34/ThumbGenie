@@ -51,10 +51,14 @@ export default function Navbar() {
                                 </button>
                                 <div className="absolute hidden group-hover:block top-6 right-0 pt-4">
                                     <button
-                                        onClick={() => logout()}
+                                        onClick={() => {
+                                            navigate('/');
+                                            logout();
+                                        }}
+                                     
                                         className="bg-white/20 border-2 border-white/20 px-5 py-1.5 rounded"
                                     >
-                                        Log Out
+                                        Logout
                                     </button>
                                 </div>
                             </div>

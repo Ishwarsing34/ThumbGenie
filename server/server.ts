@@ -34,19 +34,19 @@ app.use(cors({
     credentials: true
 }))
 
-app.set('trust proxy',1);
+app.set('trust proxy', 1);
 
 app.use(session({
     secret: process.env.SESSION_SECRET as string,
     resave: false,
     saveUninitialized: false,
     cookie: {
-        maxAge: 1000 * 60 * 60 * 24 * 7 ,
-        httpOnly:true,
-        secure:process.env.NODE_ENV === 'production',
-        sameSite:  process.env.NODE_ENV === 'production' ? 'none' : 'lax',
+        maxAge: 1000 * 60 * 60 * 24 * 7,
+        httpOnly: true,
+        secure: process.env.NODE_ENV === 'production',
+        sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
         path: '/'
-         //will stay for 7 days
+        //will stay for 7 days
     },
     store: MongoStore.create({
         mongoUrl: process.env.MONGODB_URI as string,
