@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import ThumbnailModel from "../models/Thumbnail.js";
 import { GenerateContentConfig, HarmBlockThreshold, HarmCategory } from "@google/genai";
-import ai from "../db/ai.js"
+import ai from "../db/ai.js";
 import fs from "fs";
 import path from "path";
 import { v2 as cloudinary } from "cloudinary"
@@ -203,6 +203,7 @@ export const generateThumbnail = async (req: Request, res: Response) => {
 
 
     } catch (error: any) {
+        console.error("🔥 GENERATE THUMBNAIL ERROR:", error);
         return res.status(500).json({
             message: error.message,
         });

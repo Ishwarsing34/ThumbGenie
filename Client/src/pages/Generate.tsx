@@ -56,10 +56,15 @@ const Generate = () => {
       aspect_ratio: aspectRatio,
       color_scheme: colorSchemeId,
       text_overlay: "true"
-    }
+    } 
+
+    console.log("1")
 
 
     const { data } = await api.post('/api/thumbnail/generate', apiPayload);
+  
+    
+    console.log("2")
 
     if (data.Thumbnail) {
       navigate('/generate/' + data.thumbnail._id);
